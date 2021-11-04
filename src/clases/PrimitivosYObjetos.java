@@ -1,4 +1,4 @@
-package primero;
+package clases;
 
 public class PrimitivosYObjetos {
 	
@@ -29,6 +29,9 @@ public class PrimitivosYObjetos {
 		
 		Boolean esFalso = false;
 		
+		//char => Character
+		char e = '?';
+		Character f = '?';
 		
 	}
 

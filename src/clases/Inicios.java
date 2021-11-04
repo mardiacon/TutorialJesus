@@ -3,7 +3,7 @@
 //Las azules eléctricas son objetos.
 
 //Los paquetes van en minúscula. Las clases la primera letra en mayúscula.
-package primero;
+package clases;
 //Primer dogma: (casi) todo se programa en un public class.
 public class Inicios {
 //Segundo dogma: todo empieza en el main. 

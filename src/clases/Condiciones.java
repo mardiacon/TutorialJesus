@@ -1,4 +1,4 @@
-package primero;
+package clases;
 
 public class Condiciones {
 
@@ -16,6 +16,7 @@ public class Condiciones {
 		//Para evaluar se escribe dentro de los paréntesis del if lo que queremos evaluar
 		//Si se cumple se ejecuta lo que está dentro de las llaves del if.
 		//Si no, lo que está dentro de las llaves del else
+		
 		if(esMayorDeEdad) {
 			System.out.println("Eres mayor de edad");
 		}else {

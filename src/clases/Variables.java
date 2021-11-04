@@ -1,4 +1,4 @@
-package primero;
+package clases;
 
 public class Variables {
 
@@ -37,6 +37,10 @@ public class Variables {
 		//boolean => dos valores: true (1) o false (0).
 		boolean accepted = true;
 		System.out.println(accepted);
+		
+		//char => caracteres: 3, a, B, /, -, \
+		char letraDNI = 'W';
+		System.out.println(letraDNI);
 	
 		
 		

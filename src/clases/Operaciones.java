@@ -1,4 +1,4 @@
-package primero;
+package clases;
 
 public class Operaciones {
 
