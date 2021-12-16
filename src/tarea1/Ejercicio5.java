@@ -1,4 +1,4 @@
-package tareas;
+package tarea1;
 
 import java.util.Scanner;
 
@@ -22,16 +22,36 @@ public class Ejercicio5 {
 
 		Scanner teclado = new Scanner(System.in);
 		
-		System.out.println("Precio del producto (en céntimos): ");
-		Integer precioProducto = teclado.nextInt();
+		System.out.print("Precio del producto (en céntimos): ");
+		int precioProducto = teclado.nextInt();
 		
-		System.out.println("Dinero introducido (en céntimos): ");
-		Integer dineroIntroducido = teclado.nextInt();
-		
-		Integer suma = 0;
+		System.out.print("Dinero introducido (en céntimos): ");
+		int dineroIntroducido = teclado.nextInt();
 		
 		
+		int cambio = dineroIntroducido - precioProducto;
+		int cambioInicial = cambio;
 		
-	
+		int monedas20Centimos = cambio / 20;
+		cambio = cambio%20;
+		int monedas10Centimos = cambio / 10;
+		cambio = cambio%10;
+		int monedas5Centimos = cambio / 5;
+		cambio = cambio%5;
+		int monedas2Centimos = cambio / 2;
+		cambio = cambio%2;
+		int monedas1Centimo = cambio;
+		int totalMonedas = monedas20Centimos + monedas10Centimos + monedas5Centimos + monedas2Centimos + monedas1Centimo;
+		
+		System.out.println("El cambio es: "+cambioInicial+" céntimos");
+		System.out.println("Monedas de 20 céntimos: "+monedas20Centimos);
+		System.out.println("Monedas de 10 céntimos: "+monedas10Centimos);
+		System.out.println("Monedas de 5 céntimos: "+monedas5Centimos);
+		System.out.println("Monedas de 2 céntimos: "+monedas2Centimos);
+		System.out.println("Monedas de 1 céntimo: "+monedas1Centimo);
+		System.out.println("Total de monedas: "+totalMonedas);
+		
+		teclado.close();
+		
 	}
 }
