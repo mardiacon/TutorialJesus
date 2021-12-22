@@ -45,7 +45,7 @@ public class Ejercicio1 {
 		cuentaFamiliar = new CuentaBancaria();
 		System.out.println("Cuenta familiar creada: " + cuentaFamiliar);
 		System.out.println();
-		System.out.println("Cuenta de los getters de la cuenta privada: ");
+		System.out.println("Prueba de los getters de la cuenta privada: ");
 		System.out.println("-------------------------------------------");
 		System.out.println("Id: " + cuentaPrivada.getId());
 		System.out.println("Fecha de creación: " + cuentaPrivada.getFechaCreacion());
