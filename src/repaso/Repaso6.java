@@ -1,6 +1,7 @@
 package repaso;
 
 import java.time.LocalTime;
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Repaso6 {
@@ -16,32 +17,62 @@ public class Repaso6 {
 	public static void main(String[] args) {
 		
 		Scanner teclado = new Scanner(System.in);
-		System.out.print("Introduce la hora: ");
-		int hora = teclado.nextInt();
-		System.out.print("Introduce los minutos: ");
-		int minuto = teclado.nextInt();
-		LocalTime horaIntroducida = LocalTime.of(hora, minuto);
 		
+		int hora;
+		int minuto;
+		
+		do {
+			try {
+				System.out.print("Introduzca hora (00-23): ");
+				hora = teclado.nextInt();
+			} catch (InputMismatchException excepcion) {
+				System.out.println("Error de lectura: no es un número entero válido.");
+				teclado.next();
+				hora = 24;
+			}
+		} while (hora < 00 || hora > 23);
+		
+		do {
+			try {
+				System.out.print("Introduce minuto (00-59): ");
+				minuto = teclado.nextInt();
+			} catch (InputMismatchException excepcion) {
+				System.out.println("Error de lectura: no es un número entero válido.");
+				teclado.next();
+				minuto = 60;
+			}
+		} while (minuto < 0 || minuto > 59);
+		
+		LocalTime horaIntroducida = LocalTime.of(hora, minuto);
 		LocalTime horaInicio =  LocalTime.of(6, 0);
 		LocalTime manyana = horaInicio.plusHours(6);
 		LocalTime medioDia = manyana.plusHours(4); 	
 		LocalTime tarde = medioDia.plusHours(5);
 		LocalTime noche = tarde.plusHours(3);
-		LocalTime madrugada = noche.plusHours(5);
+		LocalTime madrugada = noche.plusHours(6);
 		
-		
-		if(horaIntroducida.equals(manyana) || horaIntroducida.isAfter(madrugada) && horaIntroducida.isBefore(manyana)) {
-			System.out.println("Es por la mañana.");
-		}else if(horaIntroducida.equals(medioDia) || horaIntroducida.isAfter(manyana) && horaIntroducida.isBefore(medioDia)) {
-			System.out.println("Es medio día.");
-		}else if(horaIntroducida.equals(tarde) || horaIntroducida.isAfter(medioDia) && horaIntroducida.isBefore(tarde)) {
-			System.out.println("Es por la tarde.");
-		}else if(horaIntroducida.equals(noche) || horaIntroducida.isAfter(tarde)){
-			System.out.println("Es por la noche.");
-		}else {
-			System.out.println("Es de madrugada. ");
+	
+			if(horaIntroducida.equals(manyana) || horaIntroducida.isAfter(madrugada) && horaIntroducida.isBefore(manyana)) {
+				System.out.println("Es por la mañana.");
+			}else if(horaIntroducida.equals(medioDia) || horaIntroducida.isAfter(manyana) && horaIntroducida.isBefore(medioDia)) {
+				System.out.println("Es medio día.");
+			}else if(horaIntroducida.equals(tarde) || horaIntroducida.isAfter(medioDia) && horaIntroducida.isBefore(tarde)) {
+				System.out.println("Es por la tarde.");
+			}else if(horaIntroducida.equals(noche) || horaIntroducida.isAfter(tarde)){
+				System.out.println("Es por la noche.");
+			}else {
+				System.out.println("Es de madrugada. ");
+			
+//				InputMismatchException
+				
+//				System.out.println("Has introducido un valor no válido. ");
+//				System.out.print("Introduce la hora: ");
+//				hora = teclado.nextInt();
+//				System.out.print("Introduce los minutos: ");
+//				minuto = teclado.nextInt();
+//				horaIntroducida = LocalTime.of(hora, minuto);
+//			
 		}
-		
 		teclado.close(); 
 	}
 }

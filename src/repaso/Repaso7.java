@@ -31,5 +31,6 @@ public class Repaso7 {
 			contrasenya2 = teclado.nextLine();
 		}
 			System.out.println("Contraseña correcta.");
-	}
+			
+			teclado.close();	}
 }
