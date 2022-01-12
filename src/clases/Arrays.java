@@ -81,7 +81,6 @@ public class Arrays {
 		//Se usa el método estático join de la clase String
 		String textoJunto = String.join(" ", textoPartido);
 		
-		
 	}
 	
 }
