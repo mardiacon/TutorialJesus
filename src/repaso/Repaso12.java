@@ -15,7 +15,7 @@ public class Repaso12 {
 		
 		Scanner teclado = new Scanner(System.in);
 		
-		System.out.println("Introduzca su contraseña: ");
+		System.out.print("Introduzca su contraseña: ");
 		String contrasenya = teclado.nextLine();
 		
 		Boolean arroba = contrasenya.contains("@");
@@ -25,10 +25,22 @@ public class Repaso12 {
 		Boolean empiezaPorMayuscula = Character.isUpperCase(primerCaracter);
 		Character ultimoCaracter = contrasenya.charAt(contrasenya.length()-1);
 		Boolean acabaPorNumero = Character.isDigit(ultimoCaracter);
+		Boolean contrasenyaFinal = arroba && tieneCincoCaracteres && empiezaPorMayuscula && acabaPorNumero;
 		
+		while(!contrasenyaFinal){
+			System.out.print("Su contraseña no cumple con los requisitos establecidos. Vuelva a introducirla: ");
+			contrasenya = teclado.nextLine();	
+			arroba = contrasenya.contains("@");
+			caracteres = contrasenya.length();
+			tieneCincoCaracteres = caracteres >= 5;
+			primerCaracter = contrasenya.charAt(0);
+			empiezaPorMayuscula = Character.isUpperCase(primerCaracter);
+			ultimoCaracter = contrasenya.charAt(contrasenya.length()-1);
+			acabaPorNumero = Character.isDigit(ultimoCaracter);
+			contrasenyaFinal = arroba && tieneCincoCaracteres && empiezaPorMayuscula && acabaPorNumero;
+		}
+		System.out.println("Contraseña introducida: "+contrasenya);
 		
-		
-		
-		
+		teclado.close();
 	}
 }
