@@ -41,5 +41,17 @@ public class Bucles {
 			
 		}
 		
+		//Un bucle for sirve por ejemplo para recorrer Arrays
+		String[] nombres = {"Marta", "Lucía", "Pedro", "Reyes"};
+		for(int i = 0; i < nombres.length; i ++) {
+			System.out.println(nombres[i]);
+		}
+		
+		//Para recorrer arrays u otro tipo de colecciones (ya se verán más adelante) se suele usar
+		// un for-in
+		for(String nombre : nombres) {
+			System.out.println(nombre);
+		}
+		
 	}
 }

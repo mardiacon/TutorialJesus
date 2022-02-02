@@ -29,7 +29,7 @@ public class Ejercicio3 {
 			String textoAlReves = String.join(" ", palabrasAlReves);
 			resultados[i] = textoAlReves;
 		}
-		
+		System.out.println(Arrays.toString(textos));
 		System.out.println(Arrays.toString(resultados));
 		
 	}

@@ -16,7 +16,7 @@ public class Ejercicio1 {
 		StringBuilder sb = new StringBuilder();
 		int validas = 0;
 		int invalidas = 0;
-		Pattern expresion = Pattern.compile("^(?!-)[oOxX-]{1,7}(?!-)$");
+		Pattern expresion = Pattern.compile("^([oOxX]-[oOxX]-[oOxX]-[oOxX]|[oOxX]-[oOxX]-[oOxX]|[oOxX]-[oOxX]|[oOxX])$");
 		
 		for(int i = 0; i < anotaciones.length; i++) {
 			String anotacion = anotaciones[i];

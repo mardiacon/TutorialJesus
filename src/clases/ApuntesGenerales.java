@@ -1,6 +1,6 @@
 package clases;
 
-public class Apuntes {
+public class ApuntesGenerales {
 
 	/* 
 	 * ---IMPORTANTE TENER PRESENTE---
